@@ -1,0 +1,38 @@
+version: '3.7'
+
+services:
+
+  database: 
+    container_name: db-server
+    image: mariadb
+    environment:  
+      MARIADB_ROOT_PASSWORD: ${DB_PASSWORD}
+      MARIADB_DATABASE: ${DB_DATABASE}
+      MARIADB_USER: ${DB_USER}
+      MARIADB_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - "./src/database:/var/lib/mysql"
+    ports:
+      - 3306:3306
+    networks:
+      - project
+
+  api:
+    container_name: php-server
+    build:
+      dockerfile: ./dockerfile
+      context: ./
+    volumes:
+      - "./src:/var/www/html"
+    ports:
+      - 8000:80
+    networks: 
+      - project
+    depends_on:
+      - database
+
+
+#declaração de rede 
+networks:
+  project:
+    name: "originals-net"
