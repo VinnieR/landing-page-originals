@@ -40,10 +40,10 @@
 
 <h3>Passo-a-passo</h3>
 <ol>
-<li>Você deverá clonar esse repositório <a href="https://github.com/TroyanLock/landing-page-originals">link</a></li>
+<li>Você deverá clonar esse repositório <a href="https://github.com/TroyanLock/landing-page-originals">aqui</a></li>
 <li>Com um terminal dentro da raíz desse projeto execute o comando <code>$ docker compose up --build -d</code></li>
-<li>Para realizar a conectividade entre a API e o banco de dados, não se esqueça de configurar com arquivo <i>.env</i> que está dentro da pasta API de acordo com as mesma configurações encontradas no arquivo <i>.env.example</i></li>
-<li>Você poderá acessar o uma tela no link: <a href="http://localhost:8000">localhost:8000</a> <br> <img src=".md_files\screen_success.png"></li>
+<li>Para realizar a conectividade entre a API e o banco de dados, não se esqueça de configurar o arquivo <i>.env</i> que está dentro da pasta API de acordo com as mesmas configurações encontradas no arquivo <i>.env.example</i></li>
+<li>Você poderá acessar uma tela no link: <a href="http://localhost:8000">localhost:8000</a><br><img src=".md_files\screen_success.png"></li>
 <li>Com o terminal ainda ativo, você deverá rodar os seguintes comandos:
 <code>$ cd src/client</code> <code>$ npm install</code></li> e quando a instalação estiver completa, você pode iniciar o servidor de desenvolvimento com  <code>$ npm run serve</code>
 </ol>
@@ -52,7 +52,7 @@
 <h2 id="docker">Docker</h2>
 <p>O docker está sendo utilizado para agilizar o processo de ínicio no desenvolvimentodo projeto e evitar erros de dependências, ou de diferenças na hora da execução. Um breve resumo das imagens utilizadas abaixo.</p>
 <h3>PHP</h3>
-<p>Utilizamos uma imagem php dentro de um servidor apache para hospedarmos nossa API lúmen no localhost e exibir no navegador, para maior referência sobre a imagem <a href="https://hub.docker.com/_/php">segue o link para o dockerhub</a></p>
+<p>Utilizamos uma imagem php dentro de um servidor apache para hospedarmos nossa API lúmen no localhost e exibir no navegador, além disso direcionaremos as portas para indicar o caminho da API, para maior referência sobre a imagem <a href="https://hub.docker.com/_/php">segue o link para o dockerhub</a></p>
 
 <h3>MARIADB</h3>
 <p>para banco de dados utilizamos o MARIADB, um client MYSQL, leve e confiável, onde armazenaremos os dados do formulário, <a href="https://hub.docker.com/_/mariadb">maiores informações aqui</a></p>
